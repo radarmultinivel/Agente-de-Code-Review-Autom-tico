@@ -1,0 +1,28 @@
+{
+  "name": "gemini-pr-reviewer",
+  "version": "1.0.0",
+  "description": "AI-powered PR reviewer focusing on security and performance analysis using Google Gemini",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "gemini",
+    "pr-review",
+    "code-review",
+    "security",
+    "performance",
+    "owasp"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@octokit/rest": "^20.1.2",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
