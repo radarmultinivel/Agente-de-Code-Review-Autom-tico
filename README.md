@@ -1,6 +1,6 @@
 # Gemini PR Reviewer
 
-An AI-powered Pull Request reviewer that automatically analyzes code changes for **security vulnerabilities** and **performance issues** using Google's Gemini 1.5 Pro/Flash models.
+A Pull Request reviewer that analyzes code changes for **security vulnerabilities** and **performance issues** using Google's Gemini 1.5 Pro/Flash models.
 
 ## Features
 
@@ -37,7 +37,7 @@ An AI-powered Pull Request reviewer that automatically analyzes code changes for
               ▼            ▼            ▼
         ┌─────────┐ ┌──────────┐ ┌──────────┐
         │ github  │ │  gemini  │ │  diff    │
-        │ (Octokit)│ │ (Gen AI) │ │ (filter) │
+        │ (Octokit)│ │ (Gemini) │ │ (filter) │
         └─────────┘ └──────────┘ └──────────┘
               │            │            │
               ▼            ▼            ▼
@@ -191,7 +191,7 @@ npm run test:watch
 ├── src/
 │   ├── index.js          # Entry point and orchestrator
 │   ├── github.js         # GitHub API client (Octokit)
-│   ├── gemini.js         # Gemini AI client
+│   ├── gemini.js         # Gemini API client
 │   ├── diff.js           # Diff extraction and file filtering
 │   └── formatter.js      # Comment formatting
 ├── tests/
@@ -214,7 +214,7 @@ The reviewer handles these scenarios gracefully:
 | **API Rate Limits** | Catches HTTP 403, logs clear message |
 | **Network Failure** | Detects fetch failures with descriptive error |
 | **Empty PR (all filtered)** | Posts "no analyzable files" comment |
-| **Malformed AI Response** | Falls back with raw output and warning |
+| **Malformed Response** | Falls back with raw output and warning |
 | **Missing Environment** | Throws on startup with list of missing vars |
 | **Gemini API Errors** | Propagates with prompt feedback details |
 

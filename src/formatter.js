@@ -79,7 +79,7 @@ No security vulnerabilities, performance issues, or secrets detected in this pul
 
   if (analysis._parseError) {
     sections.push(`### ⚠️ Parse Warning
-The AI response could not be fully parsed. Please review the raw output manually.
+The response could not be fully parsed. Please review the raw output manually.
 \`\`\`
 ${analysis._parseError}
 \`\`\``);

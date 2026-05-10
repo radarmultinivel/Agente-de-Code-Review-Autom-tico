@@ -1,7 +1,7 @@
 {
   "name": "gemini-pr-reviewer",
   "version": "1.0.0",
-  "description": "AI-powered PR reviewer focusing on security and performance analysis using Google Gemini",
+  "description": "PR reviewer focusing on security and performance analysis using Google Gemini",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
